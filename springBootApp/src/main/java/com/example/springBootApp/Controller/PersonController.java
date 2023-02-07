@@ -17,11 +17,6 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping( path = "list")
-    public List<Person> list(){
-        return personService.list();
-    }
-
     @RequestMapping("item/{id}")
     public Optional<Person> show(@PathVariable Long id){
         return personService.show(id);
