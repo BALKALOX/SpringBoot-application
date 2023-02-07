@@ -16,9 +16,6 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
-    public List<Person> list(){
-        return personRepository.findAll();
-    }
     public Optional<Person> show(Long id) {
         return personRepository.findById(id);
     }
